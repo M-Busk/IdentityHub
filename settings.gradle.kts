@@ -64,6 +64,8 @@ include(":extensions:sts:sts-account-provisioner")
 include(":extensions:sts:sts-account-service-local")
 include(":extensions:sts:sts-core")
 include(":extensions:sts:sts-api")
+include(":extensions:superuser-seed")
+include(":extensions:did-example-resolver")
 
 // DCP protocol modules
 include(":protocols:dcp:dcp-spi")

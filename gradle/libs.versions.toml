@@ -118,6 +118,16 @@ dsp-core = { module = "org.eclipse.dataspacetck.dsp:core", version.ref = "dcp-tc
 dcp-system = { module = "org.eclipse.dataspacetck.dcp:dcp-system", version.ref = "dcp-tck" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit" }
 
+# identityhub SPI modules
+edc-ih-spi-did = { module = "org.eclipse.edc:did-spi", version.ref = "edc" }
+edc-ih-spi-credentials = { module = "org.eclipse.edc:verifiable-credential-spi", version.ref = "edc" }
+edc-ih-spi = { module = "org.eclipse.edc:identity-hub-spi", version.ref = "edc" }
+
+# identityhub API modules
+edc-ih-api-did = { module = "org.eclipse.edc:did-api", version.ref = "edc" }
+edc-ih-api-participants = { module = "org.eclipse.edc:participant-context-api", version.ref = "edc" }
+
+
 [bundles]
 connector = ["edc-boot", "edc-core-connector", "edc-core-runtime", "edc-http", "edc-observability", "edc-jsonld", "edc-config-fs"]
 

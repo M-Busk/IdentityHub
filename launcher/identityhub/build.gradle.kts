@@ -20,6 +20,8 @@ plugins {
 
 dependencies {
     runtimeOnly(project(":dist:bom:identityhub-bom"))
+    runtimeOnly(project(":extensions:superuser-seed"))
+    runtimeOnly(project(":extensions:did-example-resolver"))
 }
 
 application {
