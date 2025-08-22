@@ -25,6 +25,12 @@ extensibility mechanism.
 
 Here, developers find everything necessary to build and run a basic "vanilla" version of IdentityHub.
 
+## Run combined Identity Hub and Issuer Service
+```
+./gradlew build
+java -Dedc.issuer.statuslist.signing.key.alias=test -Dedc.ih.api.superuser.key="c3VwZXItdXNlcg==.c3VwZXItc2VjcmV0Cg==" -jar launcher/combined/build/libs/combined.jar
+```
+
 ## Documentation
 
 Base documentation can be found on the [documentation website](https://eclipse-edc.github.io). \
