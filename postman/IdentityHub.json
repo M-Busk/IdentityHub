@@ -1,0 +1,2444 @@
+{
+  "info": {
+    "name": "IdentityHub",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Credentials API",
+      "item": [
+        {
+          "name": "Credential Offer API",
+          "item": [
+            {
+              "name": "offerCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1/participants/:participantContextId/offers",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "participants",
+                    ":participantContextId",
+                    "offers"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Presentation API",
+          "item": [
+            {
+              "name": "queryPresentation",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1/participants/:participantContextId/presentations/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "participants",
+                    ":participantContextId",
+                    "presentations",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"@context\": {},\n  \"@type\": \"\",\n  \"presentationDefinition\": {},\n  \"scope\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Storage API",
+          "item": [
+            {
+              "name": "storeCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1/participants/:participantContextId/credentials",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "participants",
+                    ":participantContextId",
+                    "credentials"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"@context\": {},\n  \"@type\": \"\",\n  \"credentials\": [\n    {}\n  ],\n  \"requestId\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Identity API",
+      "item": [
+        {
+          "name": "DID Identity API",
+          "item": [
+            {
+              "name": "addDidEndpoint",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/:did/endpoints",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    ":did",
+                    "endpoints"
+                  ],
+                  "query": [
+                    {
+                      "key": "autoPublish",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "did",
+                      "value": ""
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"\",\n  \"serviceEndpoint\": \"\",\n  \"type\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "deleteDidEndpoint",
+              "event": [],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/:did/endpoints",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    ":did",
+                    "endpoints"
+                  ],
+                  "query": [
+                    {
+                      "key": "serviceId",
+                      "value": ""
+                    },
+                    {
+                      "key": "autoPublish",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "did",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "getAllDids",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/dids",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "dids"
+                  ],
+                  "query": [
+                    {
+                      "key": "offset",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "getDidState",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/state",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    "state"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"did\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "publishDid",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/publish",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    "publish"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"did\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "queryDids",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filterExpression\": [\n    {\n      \"operandLeft\": {},\n      \"operandRight\": {},\n      \"operator\": \"\"\n    }\n  ],\n  \"limit\": 0,\n  \"offset\": 0,\n  \"sortField\": \"\",\n  \"sortOrder\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "replaceDidEndpoint",
+              "event": [],
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/:did/endpoints",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    ":did",
+                    "endpoints"
+                  ],
+                  "query": [
+                    {
+                      "key": "autoPublish",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "did",
+                      "value": ""
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"\",\n  \"serviceEndpoint\": \"\",\n  \"type\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "unpublishDid",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/dids/unpublish",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "dids",
+                    "unpublish"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"did\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "KeyPairResources Identity API",
+          "item": [
+            {
+              "name": "activateKeyPair",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/keypairs/:keyPairId/activate",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "keypairs",
+                    ":keyPairId",
+                    "activate"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "keyPairId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "addKeyPair",
+              "event": [],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/keypairs",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "keypairs"
+                  ],
+                  "query": [
+                    {
+                      "key": "makeDefault",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"active\": false,\n  \"keyGeneratorParams\": {},\n  \"keyId\": \"\",\n  \"privateKeyAlias\": \"\",\n  \"publicKeyJwk\": {},\n  \"publicKeyPem\": \"\",\n  \"resourceId\": \"\",\n  \"type\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "getAllKeyPairs",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/keypairs",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "keypairs"
+                  ],
+                  "query": [
+                    {
+                      "key": "offset",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "getKeyPair",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/keypairs/:keyPairId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "keypairs",
+                    ":keyPairId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "keyPairId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryKeyPairByParticipantId",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/keypairs",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "keypairs"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "revokeKeyPair",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/keypairs/:keyPairId/revoke",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "keypairs",
+                    ":keyPairId",
+                    "revoke"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "keyPairId",
+                      "value": ""
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"active\": false,\n  \"keyGeneratorParams\": {},\n  \"keyId\": \"\",\n  \"privateKeyAlias\": \"\",\n  \"publicKeyJwk\": {},\n  \"publicKeyPem\": \"\",\n  \"resourceId\": \"\",\n  \"type\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "rotateKeyPair",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/keypairs/:keyPairId/rotate",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "keypairs",
+                    ":keyPairId",
+                    "rotate"
+                  ],
+                  "query": [
+                    {
+                      "key": "duration",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "keyPairId",
+                      "value": ""
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"active\": false,\n  \"keyGeneratorParams\": {},\n  \"keyId\": \"\",\n  \"privateKeyAlias\": \"\",\n  \"publicKeyJwk\": {},\n  \"publicKeyPem\": \"\",\n  \"resourceId\": \"\",\n  \"type\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "ParticipantContext Management API",
+          "item": [
+            {
+              "name": "activateParticipant",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/state",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "state"
+                  ],
+                  "query": [
+                    {
+                      "key": "isActive",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"active\": false,\n  \"additionalProperties\": {},\n  \"did\": \"\",\n  \"key\": {\n    \"active\": false,\n    \"keyGeneratorParams\": {},\n    \"keyId\": \"\",\n    \"privateKeyAlias\": \"\",\n    \"publicKeyJwk\": {},\n    \"publicKeyPem\": \"\",\n    \"resourceId\": \"\",\n    \"type\": \"\"\n  },\n  \"participantId\": \"\",\n  \"roles\": [],\n  \"serviceEndpoints\": [\n    {\n      \"id\": \"\",\n      \"serviceEndpoint\": \"\",\n      \"type\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "createParticipant",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"active\": false,\n  \"additionalProperties\": {},\n  \"did\": \"\",\n  \"key\": {\n    \"active\": false,\n    \"keyGeneratorParams\": {},\n    \"keyId\": \"\",\n    \"privateKeyAlias\": \"\",\n    \"publicKeyJwk\": {},\n    \"publicKeyPem\": \"\",\n    \"resourceId\": \"\",\n    \"type\": \"\"\n  },\n  \"participantId\": \"\",\n  \"roles\": [],\n  \"serviceEndpoints\": [\n    {\n      \"id\": \"\",\n      \"serviceEndpoint\": \"\",\n      \"type\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "deleteParticipant",
+              "event": [],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "getAllParticipants",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants"
+                  ],
+                  "query": [
+                    {
+                      "key": "offset",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "getParticipant",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "regenerateParticipantToken",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/token",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "token"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"active\": false,\n  \"additionalProperties\": {},\n  \"did\": \"\",\n  \"key\": {\n    \"active\": false,\n    \"keyGeneratorParams\": {},\n    \"keyId\": \"\",\n    \"privateKeyAlias\": \"\",\n    \"publicKeyJwk\": {},\n    \"publicKeyPem\": \"\",\n    \"resourceId\": \"\",\n    \"type\": \"\"\n  },\n  \"participantId\": \"\",\n  \"roles\": [],\n  \"serviceEndpoints\": [\n    {\n      \"id\": \"\",\n      \"serviceEndpoint\": \"\",\n      \"type\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "updateParticipantRoles",
+              "event": [],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/roles",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "roles"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {}\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "VerifiableCredentials Identity API",
+          "item": [
+            {
+              "name": "addCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"\",\n  \"issuancePolicy\": {\n    \"@type\": \"\",\n    \"assignee\": \"\",\n    \"assigner\": \"\",\n    \"extensibleProperties\": {},\n    \"inheritsFrom\": \"\",\n    \"obligations\": [\n      {\n        \"action\": {\n          \"constraint\": {\n            \"edctype\": \"\"\n          },\n          \"includedIn\": \"\",\n          \"type\": \"\"\n        },\n        \"constraints\": [\n          {}\n        ]\n      }\n    ],\n    \"permissions\": [\n      {\n        \"action\": {},\n        \"constraints\": [\n          {}\n        ],\n        \"duties\": [\n          {}\n        ]\n      }\n    ],\n    \"profiles\": [],\n    \"prohibitions\": [\n      {\n        \"action\": {},\n        \"constraints\": [\n          {}\n        ],\n        \"remedies\": [\n          {}\n        ]\n      }\n    ],\n    \"target\": \"\"\n  },\n  \"participantContextId\": \"\",\n  \"reissuancePolicy\": {},\n  \"verifiableCredentialContainer\": {\n    \"credential\": {\n      \"credentialSchema\": [\n        {\n          \"id\": \"\",\n          \"type\": \"\"\n        }\n      ],\n      \"credentialStatus\": [\n        {\n          \"additionalProperties\": {},\n          \"id\": \"\",\n          \"type\": \"\"\n        }\n      ],\n      \"credentialSubject\": [\n        {\n          \"claims\": {},\n          \"id\": \"\"\n        }\n      ],\n      \"dataModelVersion\": \"\",\n      \"description\": \"\",\n      \"expirationDate\": \"\",\n      \"id\": \"\",\n      \"issuanceDate\": \"\",\n      \"issuer\": {\n        \"additionalProperties\": {},\n        \"id\": \"\"\n      },\n      \"name\": \"\",\n      \"type\": []\n    },\n    \"format\": \"\",\n    \"rawVc\": \"\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "deleteCredential",
+              "event": [],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/:credentialId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    ":credentialId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "getAllCredentials",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/credentials",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "credentials"
+                  ],
+                  "query": [
+                    {
+                      "key": "offset",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "getCredential",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/:credentialId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    ":credentialId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "getCredentialRequest",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/request/:holderPid",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    "request",
+                    ":holderPid"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "holderPid",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryCredentialsByType",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "requestCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/request",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    "request"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"credentials\": [\n    {\n      \"format\": \"\",\n      \"id\": \"\",\n      \"type\": \"\"\n    }\n  ],\n  \"holderPid\": \"\",\n  \"issuerDid\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "updateCredential",
+              "event": [],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"\",\n  \"issuancePolicy\": {\n    \"@type\": \"\",\n    \"assignee\": \"\",\n    \"assigner\": \"\",\n    \"extensibleProperties\": {},\n    \"inheritsFrom\": \"\",\n    \"obligations\": [\n      {\n        \"action\": {\n          \"constraint\": {\n            \"edctype\": \"\"\n          },\n          \"includedIn\": \"\",\n          \"type\": \"\"\n        },\n        \"constraints\": [\n          {}\n        ]\n      }\n    ],\n    \"permissions\": [\n      {\n        \"action\": {},\n        \"constraints\": [\n          {}\n        ],\n        \"duties\": [\n          {}\n        ]\n      }\n    ],\n    \"profiles\": [],\n    \"prohibitions\": [\n      {\n        \"action\": {},\n        \"constraints\": [\n          {}\n        ],\n        \"remedies\": [\n          {}\n        ]\n      }\n    ],\n    \"target\": \"\"\n  },\n  \"participantContextId\": \"\",\n  \"reissuancePolicy\": {},\n  \"verifiableCredentialContainer\": {\n    \"credential\": {\n      \"credentialSchema\": [\n        {\n          \"id\": \"\",\n          \"type\": \"\"\n        }\n      ],\n      \"credentialStatus\": [\n        {\n          \"additionalProperties\": {},\n          \"id\": \"\",\n          \"type\": \"\"\n        }\n      ],\n      \"credentialSubject\": [\n        {\n          \"claims\": {},\n          \"id\": \"\"\n        }\n      ],\n      \"dataModelVersion\": \"\",\n      \"description\": \"\",\n      \"expirationDate\": \"\",\n      \"id\": \"\",\n      \"issuanceDate\": \"\",\n      \"issuer\": {\n        \"additionalProperties\": {},\n        \"id\": \"\"\n      },\n      \"name\": \"\",\n      \"type\": []\n    },\n    \"format\": \"\",\n    \"rawVc\": \"\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Issuer Admin API",
+      "item": [
+        {
+          "name": "Issuer Service Holder Admin API",
+          "item": [
+            {
+              "name": "addHolder",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/holders",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "holders"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"did\": \"\",\n  \"holderId\": \"\",\n  \"name\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "getHolderById",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/holders/:holderId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "holders",
+                    ":holderId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "holderId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryHolders",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/holders/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "holders",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filterExpression\": [\n    {\n      \"operandLeft\": {},\n      \"operandRight\": {},\n      \"operator\": \"\"\n    }\n  ],\n  \"limit\": 0,\n  \"offset\": 0,\n  \"sortField\": \"\",\n  \"sortOrder\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "updateHolder",
+              "event": [],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/holders",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "holders"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"did\": \"\",\n  \"holderId\": \"\",\n  \"name\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Issuer Service Attestation Admin API",
+          "item": [
+            {
+              "name": "createAttestation",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/attestations",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "attestations"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"attestationType\": \"\",\n  \"configuration\": {},\n  \"id\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "deleteAttestation",
+              "event": [],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/attestations/:attestationDefinitionId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "attestations",
+                    ":attestationDefinitionId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "attestationDefinitionId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryAttestations",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/attestations/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "attestations",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filterExpression\": [\n    {\n      \"operandLeft\": {},\n      \"operandRight\": {},\n      \"operator\": \"\"\n    }\n  ],\n  \"limit\": 0,\n  \"offset\": 0,\n  \"sortField\": \"\",\n  \"sortOrder\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Issuer Service Credential Definitions Admin API",
+          "item": [
+            {
+              "name": "createCredentialDefinition",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentialdefinitions",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentialdefinitions"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"attestations\": [],\n  \"credentialType\": \"\",\n  \"format\": \"\",\n  \"id\": \"\",\n  \"jsonSchema\": \"\",\n  \"jsonSchemaUrl\": \"\",\n  \"mappings\": [\n    {\n      \"input\": \"\",\n      \"output\": \"\",\n      \"required\": false\n    }\n  ],\n  \"rules\": [\n    {\n      \"configuration\": {},\n      \"type\": \"\"\n    }\n  ],\n  \"validity\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "deleteCredentialDefinitionById",
+              "event": [],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentialdefinitions/:credentialDefinitionId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentialdefinitions",
+                    ":credentialDefinitionId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialDefinitionId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "getCredentialDefinitionById",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentialdefinitions/:credentialDefinitionId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentialdefinitions",
+                    ":credentialDefinitionId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialDefinitionId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryCredentialDefinitions",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentialdefinitions/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentialdefinitions",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filterExpression\": [\n    {\n      \"operandLeft\": {},\n      \"operandRight\": {},\n      \"operator\": \"\"\n    }\n  ],\n  \"limit\": 0,\n  \"offset\": 0,\n  \"sortField\": \"\",\n  \"sortOrder\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "updateCredentialDefinition",
+              "event": [],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentialdefinitions",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentialdefinitions"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"attestations\": [],\n  \"credentialType\": \"\",\n  \"format\": \"\",\n  \"id\": \"\",\n  \"jsonSchema\": \"\",\n  \"jsonSchemaUrl\": \"\",\n  \"mappings\": [\n    {\n      \"input\": \"\",\n      \"output\": \"\",\n      \"required\": false\n    }\n  ],\n  \"rules\": [\n    {\n      \"configuration\": {},\n      \"type\": \"\"\n    }\n  ],\n  \"validity\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Issuer Service Credentials Admin API",
+          "item": [
+            {
+              "name": "checkCredentialStatus",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/:credentialId/status",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    ":credentialId",
+                    "status"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryCredentials",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filterExpression\": [\n    {\n      \"operandLeft\": {},\n      \"operandRight\": {},\n      \"operator\": \"\"\n    }\n  ],\n  \"limit\": 0,\n  \"offset\": 0,\n  \"sortField\": \"\",\n  \"sortOrder\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "resumeCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/:credentialId/resume",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    ":credentialId",
+                    "resume"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "revokeCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/:credentialId/revoke",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    ":credentialId",
+                    "revoke"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "sendCredentialOffer",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/offer",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    "offer"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"credentials\": [],\n  \"holderId\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "suspendCredential",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials/:credentialId/suspend",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "credentials",
+                    ":credentialId",
+                    "suspend"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "credentialId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Issuer Service Issuance Process Admin API",
+          "item": [
+            {
+              "name": "getIssuanceProcessById",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/issuanceprocesses/:issuanceProcessId",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "issuanceprocesses",
+                    ":issuanceProcessId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    },
+                    {
+                      "key": "issuanceProcessId",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "queryIssuanceProcesses",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/issuanceprocesses/query",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "issuanceprocesses",
+                    "query"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filterExpression\": [\n    {\n      \"operandLeft\": {},\n      \"operandRight\": {},\n      \"operator\": \"\"\n    }\n  ],\n  \"limit\": 0,\n  \"offset\": 0,\n  \"sortField\": \"\",\n  \"sortOrder\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Issuer API",
+      "item": [
+        {
+          "name": "Issuer Metadata API",
+          "item": [
+            {
+              "name": "getIssuerMetadata",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "disabled": true,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/metadata",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha",
+                    "participants",
+                    ":participantContextId",
+                    "metadata"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "participantContextId",
+                      "value": "{{participantContextId}}"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Credential Request Status API",
+              "item": [
+                {
+                  "name": "getCredentialRequestStatus",
+                  "event": [],
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "",
+                        "disabled": true,
+                        "type": "default"
+                      }
+                    ],
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "description": "",
+                    "url": {
+                      "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/requests/:credentialRequestId",
+                      "protocol": "",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1alpha",
+                        "participants",
+                        ":participantContextId",
+                        "requests",
+                        ":credentialRequestId"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "key": "participantContextId",
+                          "value": "{{participantContextId}}"
+                        },
+                        {
+                          "key": "credentialRequestId",
+                          "value": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Credential Request API",
+              "item": [
+                {
+                  "name": "requestCredentials",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "",
+                        "disabled": true,
+                        "type": "default"
+                      }
+                    ],
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "description": "",
+                    "url": {
+                      "raw": "{{baseUrl}}/v1alpha/participants/:participantContextId/credentials",
+                      "protocol": "",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1alpha",
+                        "participants",
+                        ":participantContextId",
+                        "credentials"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "key": "participantContextId",
+                          "value": "{{participantContextId}}"
+                        }
+                      ]
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"@context\": {},\n  \"credentials\": [\n    {\n      \"credentialType\": \"\",\n      \"format\": \"\"\n    }\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "STS API",
+      "item": [
+        {
+          "name": "Secure Token Service API",
+          "item": [
+            {
+              "name": "token",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "{{baseUrl}}/token",
+                  "protocol": "",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "token"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "audience",
+                      "value": "",
+                      "disabled": false,
+                      "type": "default"
+                    },
+                    {
+                      "key": "bearer_access_scope",
+                      "value": "",
+                      "disabled": false,
+                      "type": "default"
+                    },
+                    {
+                      "key": "client_id",
+                      "value": "",
+                      "disabled": false,
+                      "type": "default"
+                    },
+                    {
+                      "key": "client_secret",
+                      "value": "",
+                      "disabled": false,
+                      "type": "default"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "",
+                      "disabled": false,
+                      "type": "default"
+                    },
+                    {
+                      "key": "token",
+                      "value": "",
+                      "disabled": false,
+                      "type": "default"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "participantContextId",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
