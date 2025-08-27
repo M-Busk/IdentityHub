@@ -36,3 +36,10 @@ tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
 edcBuild {
     publish.set(false)
 }
+
+tasks.withType<JavaExec> {
+    systemProperty("edc.issuer.statuslist.signing.key.alias", "test")
+    systemProperty("edc.ih.api.superuser.key", "c3VwZXItdXNlcg==.c3VwZXItc2VjcmV0Cg==")
+    systemProperty("edc.jsonld.http.enabled", true)
+    systemProperty("edc.jsonld.https.enabled", true)
+}

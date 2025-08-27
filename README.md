@@ -27,8 +27,7 @@ Here, developers find everything necessary to build and run a basic "vanilla" ve
 
 ## Run combined Identity Hub and Issuer Service
 ```
-./gradlew build
-java -Dedc.issuer.statuslist.signing.key.alias=test -Dedc.ih.api.superuser.key="c3VwZXItdXNlcg==.c3VwZXItc2VjcmV0Cg==" -jar launcher/combined/build/libs/combined.jar
+./gradlew :launcher:combined:run
 ```
 
 ## Documentation
